@@ -24,7 +24,7 @@ Python编写，需要**root**权限，支持Centos 7/Ubuntu 20/Debain 11，其�
 
    ![测试结果](https://source.accepted.fun/image/article/image-20211107183157773.png)
 
-> 你可以使用**-i**选项指定镜像或使用**-t**选项指定超时时间，具体请使用**-h**选项查看帮助
+> 你可以使用-i选项指定镜像或使用-t选项指定超时时间，具体请使用-h选项查看帮助
 
 ## 目前收录的国内镜像源
 
