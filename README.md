@@ -1,16 +1,14 @@
 # docker-mirror
 
-查找国内最快的docker镜像源。
+查找最快的docker镜像源:sparkles:
 
-Python编写，需要**root**权限，支持Centos 7.5，其他操作系统还未测试。
+Python编写，需要**root**权限，支持Centos 7/Ubuntu 20/Debain 11，其他操作系统还未测试。
 
-脚本会自动从收集的镜像列表下载`busybox:1.34.1`镜像，并计算使用的时间，如果超过60s则跳过，对测试结果根据时间进行排序，为你自动设置时间最短的前三个镜像源，**请勿在生产环境使用**。
+脚本会自动从收集的镜像列表下载`busybox:1.34.1`镜像，并计算使用的时间，如果超过设置的时间则跳过，避免长时间的等待，对测试结果根据时间进行排序，为你自动设置耗时最短的前三个镜像源，**请勿在生产环境中使用**。
 
 ## 使用教程
 
-### 二进制（推荐）
-
-1. 下载二进制包[docker-mirror.tar.gz](https://github.com/jiaxinonly/docker-mirror/releases/download/0.1.0/docker-mirror.tar.gz)
+1. 下载二进制包[docker-mirror.tar.gz](https://github.com/jiaxinonly/docker-mirror/releases/download/0.1.1/docker-mirror.tar.gz)
 
 2. 解压包
 
@@ -26,32 +24,7 @@ Python编写，需要**root**权限，支持Centos 7.5，其他操作系统还�
 
    ![测试结果](https://source.accepted.fun/image/article/image-20211107183157773.png)
 
-### 源码
-
-> 支持python2和python3
-
-1. 安装yum源和python-pip，如果有python和pip环境请跳过
-
-   ```shell
-   yum install -y epel-release
-   yum install -y python-pip
-   ```
-
-2. pip安装依赖
-
-   ```shell
-   pip install futures timeout-decorator -i https://mirrors.aliyun.com/pypi/simple
-   ```
-
-3. 下载[docker-mirror.py](https://raw.githubusercontent.com/jiaxinonly/docker-mirror/main/docker-mirror.py) 文件到本地
-
-2. 执行脚本
-
-   ```shell
-   python docker-mirror.py
-   ```
-
-   ![测试结果](https://source.accepted.fun/image/article/image-20211107183157773.png)
+> 你可以使用**-i**选项指定镜像或使用**-t**选项指定超时时间，具体请使用**-h**选项查看帮助
 
 ## 目前收录的国内镜像源
 
