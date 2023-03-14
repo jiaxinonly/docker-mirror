@@ -15,9 +15,9 @@ from getopt import getopt, GetoptError
 
 # 镜像列表
 mirrors = {
-    "docker": "",  # 使用官方默认
+    "docker": "https://docker.io",  # docker官方默认
     "docker-cn": "https://registry.docker-cn.com",  # docker官方中国镜像
-    "azure": "https://dockerhub.azk8s.cn",
+    "azure": "https://dockerhub.azk8s.cn",  # azure
     "tencentyun": "https://mirror.ccs.tencentyun.com",  # 腾讯云
     "daocloud": "https://f1361db2.m.daocloud.io",  # 道客
     "netease": "https://hub-mirror.c.163.com",  # 网易
@@ -104,7 +104,7 @@ class DockerClient:
 if __name__ == '__main__':
     image = "busybox:1.34.1"  # 默认拉取的镜像
     timeout = 60  # 默认超过60秒取消
-    version = "0.1.1"  # 版本号
+    version = "0.1.2"  # 版本号
 
     # 获取参数
     try:
