@@ -8,7 +8,7 @@ Python编写，需要**root**权限，支持Centos 7/Ubuntu 20/Debain 11，其�
 
 ## 使用教程
 
-1. 下载二进制包[docker-mirror.tar.gz](https://github.com/jiaxinonly/docker-mirror/releases/download/0.1.1/docker-mirror.tar.gz)
+1. 下载二进制包[docker-mirror.tar.gz](https://github.com/jiaxinonly/docker-mirror/releases/latest/download/docker-mirror.tar.gz)
 
 2. 解压包
 
